@@ -1,0 +1,28 @@
+{
+  "name": "hyundai-htalk-pro-bot-history-clean",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "vite",
+    "dev:server": "nodemon server.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.3",
+    "vite": "^5.4.0",
+    "vite-plugin-pwa": "^1.0.2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "phases": {
+        "install": { "cmds": ["npm ci"] },
+        "build":   { "cmds": ["npm run build"] },
+        "start":   { "cmds": ["node server.js"] }
+      }
+    }
+  },
+  "variables": {
+    "REPLY_MIN_SEC": "180",
+    "REPLY_MAX_SEC": "300",
+    "AUTO_REPLY": "1",
+    "MENTION_REMOTE": "0",
+    "NODE_VERSION": "20"
+  }
+}

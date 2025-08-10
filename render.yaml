@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: htalk
+    env: node
+    plan: free
+    buildCommand: "npm ci && npm run build"
+    startCommand: "node server.js"
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: REPLY_MIN_SEC
+        value: "180"
+      - key: REPLY_MAX_SEC
+        value: "300"
+      - key: AUTO_REPLY
+        value: "1"
+      - key: MENTION_REMOTE
+        value: "0"
