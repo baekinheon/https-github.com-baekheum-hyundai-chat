@@ -13,7 +13,7 @@ RUN npm ci --omit=dev
 COPY server.js ./server.js
 COPY shared ./shared
 COPY data ./data
-COPY dist ./dist
+COPY --from=build /app/dist ./dist
 ENV PORT=8080
 EXPOSE 8080
 CMD ["node", "server.js"]
